@@ -1,0 +1,32 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+<head> 
+<style type="text/css" media="all">
+body{background-color:#FFFFD1;text-align:justify;color: black;font-family:Ubuntu;}
+h1{text-align:center;color: black; font-family:Verdana;}
+p{text-align:justify;}
+</style>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+</head>
+<body><br>
+<h1>¡Bienvenido a Food Browser!</h1>
+<p>
+Con ayuda de Food Browser tendrá la posibilidad de buscar sus 
+restaurantes favoritos por su nombre, por un platillo en
+específico, un ingrediente o su país de origen de manera fácil y
+rápida. Además podrá agregar nuevos restaurantes con sus respectivos 
+platillos para mejorar búsquedas futuras y así obtener mejores
+resultados en sus búsquedas.</br>
+
+<b><br>Uso de la aplicación:</br></b><br>
+
+Si desea hacer una consulta debe ir a "Consultar", llenar los datos solicitados y pulsar el botón "Buscar" para obtener los resultados.
+Si desea agregar un restaurante o un platillo debe ir a "Agregar" y llenar los datos solicitados y pulsar el botón "Listo" para añadir la información a la base de datos.</p>
+<div style="text-align:center"><img src="static/bombur.png" width="200" height="200"></div>
+</body>
+</html>
+
+{% endblock %}
