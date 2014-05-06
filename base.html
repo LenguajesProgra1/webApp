@@ -1,0 +1,31 @@
+<html>
+  <head>
+  {% if title %}
+  <title>{{title}} - Food Browser!</title>
+  {% else %}
+  <title>Food Browser!</title>
+  {% endif %}
+  <style type="text/css" media="all"> 
+  div {color:black; font-family:Ubuntu;} 
+  </style>
+  </head>
+  <body>
+    <div> 
+       <a href="/index" style="text-decoration:none">Inicio</a>
+       <a href="/agregar" style="text-decoration:none; margin-left:80px">Agregar Restaurante</a>
+       <a href="/consultar" style="text-decoration:none; margin-left:80px">Consultar</a>
+       <a href="/agregarPlatillo" style="text-decoration:none; margin-left:80px">Agregar platillo</a>
+    </div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>
