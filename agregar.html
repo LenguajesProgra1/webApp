@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head>
+<style type="text/css" media="all"> 
+h1 {text-align:center; color:black; font-family:Verdana;} 
+form {text-align:justify; color: black;font-family:Ubuntu;}
+body{background-color:#FFFFD1;}
+</style>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<br>
+<h1><font size="6">Agregar Restaurante!</font></h1><br>
+<form method="POST" action="/agregar">
+<fieldset>
+<legend><font size="3">Informacion basica</font></legend>
+<br>
+{{ form.hidden_tag() }}
+{{ form.nombre.label }} {{ form.nombre(size=20) }}<br>
+{{ form.tipo.label }} {{ form.tipo(size=20) }} <br>
+{{ form.ubic.label }} {{ form.ubic(size=20) }} <br>
+{{ form.tel.label }} {{ form.tel(size=20) }} <br>
+{{ form.hora.label }} {{ form.hora(size=20) }} <br>
+<input type="submit" value="Agregar">
+</fieldset>
+</form>
+</body>
+</html>
+{% endblock %}
