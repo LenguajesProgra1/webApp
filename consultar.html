@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+<head>
+<style type="text/css" media="all"> 
+h1 {text-align:center; color:black; font-family:Verdana;} 
+form {text-align:justify; color: black;font-family:Ubuntu;}
+body{background-color:#FFFFD1;}
+</style>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<br>
+<h1><font size="6">Consultar Restaurante!</font></h1><br>
+<form method="POST" action="/consultar">
+<fieldset>
+<legend><font size="3">Informacion basica</font></legend>
+<br>
+{{ form.hidden_tag() }}
+{{ form.nombre.label }} {{ form.nombre(size=20) }}<br>
+{{ form.platillo.label }} {{ form.platillo(size=20) }}
+{{ form.ingrPlat.label }} {{ form.ingrPlat(size=20) }}{{ form.opc.label }}<br>
+{{ form.ingr.label }} {{ form.ingr(size=20) }}<br>
+{{ form.pais.label }} {{ form.pais(size=20) }}<br>
+<input type="submit" value="Consultar">
+</form>
+</body>
+</html>
+{% endblock %}
