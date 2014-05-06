@@ -1,0 +1,11 @@
+plato(Nombre,Sabor,Pais,Ingreds,Rest).
+rest(N,Tipo,Ubic,Tel,Hor).
+rest(tukasa,occidental,cartago,235,lunes).
+rest(pomodoro,italiano,sj,345,martes).
+plato(pasta,salado,italia,queso,pomodoro).
+todo_rest:-rest(N,Tipo,Ubic,Tel,Hor),write(N),write(Tipo),write(Ubic),write(Tel),write(Hor),nl,fail.
+por_tipo(T):-rest(X,T,_,_,_),write(X),nl,fail.
+por_nom(N):-rest(N,Tipo,Ubic,Tel,Hor),write(N),write(Tipo),write(Ubic),write(Tel),write(Hor),nl,fail.
+por_pais(P):-plato(_,_,P,_,X),write(X),nl,fail.
+platillos(Rest):-plato(Nombre,Sabor,Pais,Ingreds,Rest),write(Nombre),write(Sabor),write(Pais),write(Ingreds),nl,fail.
+ingred_plato(Rest,I):-plato(N,_,_,I,Rest),write(N),nl,fail.
